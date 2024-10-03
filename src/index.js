@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import axios from 'axios';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
@@ -10,6 +11,7 @@ import { AuthProvider } from './context/auth';
 import "antd/dist/reset.css"
 import { SearchProvider } from './context/search';
 import { CartProvider } from './context/cart';
+axios.defaults.baseURL = 'https://ecommerce-server-93e9.onrender.com';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <AuthProvider>
