@@ -10,7 +10,13 @@ const Products = () => {
     //getall products
     const getAllProducts = async () => {
         try {
-            const { data } = await axios.get("/api/v1/product/get-product");
+            const { data } = await axios.get(" {products?.map((p) => (
+              <div className="card m-2" style={{ width: "18rem" }} key={p._id}>
+                <img
+                  src={`https://ecommerce-server-93e9.onrender.com/api/v1/product/product-photo/${p._id}`}
+                  className="card-img-top"
+                  alt={p.name}
+                />/api/v1/product/get-product");
             setProducts(data.products);
         } catch (error) {
             console.log(error);
@@ -39,7 +45,13 @@ const Products = () => {
                             >
                                 <div className="card m-2" style={{ width: "18rem" }}>
                                     <img
-                                        src={`/api/v1/product/product-photo/${p._id}`}
+                                        src={` {products?.map((p) => (
+              <div className="card m-2" style={{ width: "18rem" }} key={p._id}>
+                <img
+                  src={`https://ecommerce-server-93e9.onrender.com/api/v1/product/product-photo/${p._id}`}
+                  className="card-img-top"
+                  alt={p.name}
+                />/api/v1/product/product-photo/${p._id}`}
                                         className="card-img-top"
                                         alt={p.name}
                                     />
