@@ -153,7 +153,13 @@ const UpdateProduct = () => {
                                 ) : (
                                     <div className="text-center">
                                         <img
-                                            src={`/api/v1/product/product-photo/${id}`}
+                                            src={` {products?.map((p) => (
+              <div className="card m-2" style={{ width: "18rem" }} key={p._id}>
+                <img
+                  src={`https://ecommerce-server-93e9.onrender.com/api/v1/product/product-photo/${p._id}`}
+                  className="card-img-top"
+                  alt={p.name}
+                />/api/v1/product/product-photo/${id}`}
                                             alt="product_photo"
                                             height={"200px"}
                                             className="img img-responsive"
