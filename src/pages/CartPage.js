@@ -57,10 +57,7 @@ const CartPage = () => {
                             <div className="row mb-2 p-3 card flex-row">
                                 <div className="col-md-4">
                                     <img
-                                        src={` {products?.map((p) => (
-              <div className="card m-2" style={{ width: "18rem" }} key={p._id}>
-                <img
-                  src={`https://ecommerce-server-93e9.onrender.com/api/v1/product/product-photo/${p._id}`}
+                                        src={`https://ecommerce-server-93e9.onrender.com/api/v1/product/product-photo/${p._id}`}
                                         className="card-img-top"
                                         alt={p.name}
                                         width="100px"
