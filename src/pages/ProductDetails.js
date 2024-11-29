@@ -40,7 +40,7 @@ const ProductDetails = () => {
             <div className="row container mt-2">
                 <div className="col-md-6">
                     <img
-                        src={`/api/v1/product/product-photo/${product._id}`}
+                        src={`https://ecommerce-server-93e9.onrender.com/api/v1/product/product-photo/${product._id}`}
                         className="card-img-top"
                         alt={product.name}
                         height="300"
