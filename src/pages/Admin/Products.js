@@ -8,7 +8,7 @@ const Products = () => {
     const [products, setProducts] = useState([]);
 
     //getall products
-  const getAllProducts = async () => {
+    const getAllProducts = async () => {
         try {
             const { data } = await axios.get("/api/v1/product/get-product");
             setProducts(data.products);
@@ -17,7 +17,6 @@ const Products = () => {
             toast.error("Someething Went Wrong");
         }
     };
-
 
     //lifecycle method
     useEffect(() => {
@@ -40,10 +39,7 @@ const Products = () => {
                             >
                                 <div className="card m-2" style={{ width: "18rem" }}>
                                     <img
-                                        src={` {products?.map((p) => (
-              <div className="card m-2" style={{ width: "18rem" }} key={p._id}>
-                <img
-                  src={`https://ecommerce-server-93e9.onrender.com/api/v1/product/product-photo/${p._id}`}
+                                        src={`https://ecommerce-server-93e9.onrender.com/api/v1/product/product-photo/${p._id}`}
                                         className="card-img-top"
                                         alt={p.name}
                                     />
