@@ -8,18 +8,16 @@ const Products = () => {
     const [products, setProducts] = useState([]);
 
     //getall products
-    const getAllProducts = async () => {
+  const getAllProducts = async () => {
         try {
-            const { data } = await axios.get(" {products?.map((p) => (
-              <div className="card m-2" style={{ width: "18rem" }} key={p._id}>
-                <img
-                  src={`https://ecommerce-server-93e9.onrender.com/api/v1/product/get-product");
+            const { data } = await axios.get("/api/v1/product/get-product");
             setProducts(data.products);
         } catch (error) {
             console.log(error);
             toast.error("Someething Went Wrong");
         }
     };
+
 
     //lifecycle method
     useEffect(() => {
